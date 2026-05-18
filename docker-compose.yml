@@ -1,0 +1,10 @@
+services:
+  user-service:
+    build: ./users_service
+    ports:
+      - "8001:8000"
+
+  like-service:
+    build: ./like_service
+    ports:
+      - "8002:8000"

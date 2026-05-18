@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+    <title>Iphone 14 Pro</title>
+  </head>
+  <body class="login-page">
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="menu-link" href="/"> На главную </a>
+            </li>
+          </ul>
+          <a class="logo">
+            <img src="{% static 'main/images/logo.svg' %}" alt="логотип сайта" class="logo-img" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="logining">
+        <div class="container">
+          <div class="login-inner">
+            <form action="#" id="login-form" class="login-form">
+              <h2 class="login-title">Войти в личный кабинет</h2>
+              <input
+                type="text"
+                id="name"
+                class="login-input"
+                placeholder="Ваше Имя"
+                required
+              />
+              <input
+                type="text"
+                id="surname"
+                class="login-input"
+                placeholder="Ваше Фамилия"
+                optional
+              />
+              <input
+                type="text"
+                id="date"
+                class="login-input"
+                placeholder="Ваша дата рождения"
+                optional
+              />
+              <input
+                type="email"
+                id="email"
+                class="login-input"
+                placeholder="Ваш email"
+                required
+              />
+
+              <input
+                type="password"
+                id="password"
+                class="login-input"
+                placeholder="Ваш пароль"
+                required
+                minlength="8"
+              />
+              <input
+                type="password"
+                id="password_2"
+                class="login-input"
+                placeholder="Повторите пароль"
+                required
+                minlength="8"
+              />
+              <button type="submit" class="login-btn">Войти</button>
+            </form>
+            <div class="login-form-img">
+              <img src="{% static 'main/images/contact.jpg' %}" alt="phone" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <a class="footer-link" href="#">Политика и конфиденциальность</a>
+          <a class="logo">
+            <img src="{% static 'main/images/logo.svg' %}" alt="логотип сайта" class="logo-img" />
+          </a>
+          <a class="phone" href="tel:7(000)0000000">+7(000)000-00-00</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{% static 'main/js/script.js' %}"></script>
+  </body>
+</html>

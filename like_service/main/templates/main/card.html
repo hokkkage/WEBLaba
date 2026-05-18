@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>Iphone 14 Pro</title>
+  </head>
+  <body class="card-page">
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="menu-link" href="/"> На главную </a>
+            </li>
+          </ul>
+          <a class="logo">
+            <img src="{% static 'main/images/logo.svg' %}" alt="логотип сайта" class="logo-img" />
+          </a>
+          <div class="header-login">
+            <a href="{% url 'login' %}" class="login">Войти</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section id="silver" class="silver">
+        <div class="container">
+          <div class="card-inner">
+            <img src="{% static 'main/images/silver_1.svg' %}"  alt="silver" class="card-iphone" />
+            <div class="card-right-side">
+              <div class="card-text">
+                <h2 class="card-title">Apple iPhone 14 Pro 256GB, Silver</h2>
+                <p class="card-color">
+                  <span><strong>Цвет</strong></span> <span>Серебристый</span>
+                </p>
+                <p class="memory">
+                  <span><strong>Память</strong></span> <span>256 ГБ</span>
+                </p>
+                <p class="price">
+                  <span><strong>Цена</strong></span> <span>79 990 руб.</span>
+                </p>
+              </div>
+              <div class="likes-block">
+                <button onclick="sendLike(1, 1)">👍</button>
+                <span id="likes-1">0</span>
+
+                <button onclick="sendLike(1, -1)">👎</button>
+                <span id="dislikes-1">0</span>
+              </div>
+              <a href="/#contacts" class="card-btn">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="purple" class="purple">
+        <div class="container">
+          <div class="card-inner">
+            <img src="{% static 'main/images/purple.svg' %}" alt="purple" class="card-iphone" />
+            <div class="card-right-side">
+              <div class="card-text">
+                <h2 class="card-title">
+                  Apple iPhone 14 Pro 256GB, deep Purple
+                </h2>
+                <p class="card-color">
+                  <span><strong>Цвет</strong></span>
+                  <span>Темно-фиолетовый</span>
+                </p>
+                <p class="memory">
+                  <span><strong>Память</strong></span> <span>512 ГБ</span>
+                </p>
+                <p class="price">
+                  <span><strong>Цена</strong></span> <span>89 990 руб.</span>
+                </p>
+              </div>
+              <div class="likes-block">
+                <button onclick="sendLike(2, 1)">👍</button>
+                <span id="likes-2">0</span>
+
+                <button onclick="sendLike(2, -1)">👎</button>
+                <span id="dislikes-2">0</span>
+              </div>
+              <a href="/#contacts" class="card-btn">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gold" class="gold">
+        <div class="container">
+          <div class="card-inner">
+            <img src="{% static 'main/images/голд.svg' %}" alt="gold" class="card-iphone" />
+            <div class="card-right-side">
+              <div class="card-text">
+                <h2 class="card-title">Apple iPhone 14 Pro 256GB, Gold</h2>
+                <p class="card-color">
+                  <span><strong>Цвет</strong></span> <span>Золотой</span>
+                </p>
+                <p class="memory">
+                  <span><strong>Память</strong></span> <span>256 ГБ</span>
+                </p>
+                <p class="price">
+                  <span><strong>Цена</strong></span> <span>79 990 руб.</span>
+                </p>
+              </div>
+              <div class="likes-block">
+                <button onclick="sendLike(3, 1)">👍</button>
+                <span id="likes-3">0</span>
+
+                <button onclick="sendLike(3, -1)">👎</button>
+                <span id="dislikes-3">0</span>
+              </div>
+              <a href="/#contacts" class="card-btn">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="black" class="black">
+        <div class="container">
+          <div class="card-inner">
+            <img src=" {% static 'main/images/black.svg' %}" alt="black" class="card-iphone" />
+            <div class="card-right-side">
+              <div class="card-text">
+                <h2 class="card-title">
+                  Apple iPhone 14 Pro 256GB, space Black
+                </h2>
+                <p class="card-color">
+                  <span><strong>Цвет</strong></span>
+                  <span>Космический черный</span>
+                </p>
+                <p class="memory">
+                  <span><strong>Память</strong></span> <span>1 ТБ</span>
+                </p>
+                <p class="price">
+                  <span><strong>Цена</strong></span> <span>109 990 руб.</span>
+                </p>
+              </div>
+              <div class="likes-block">
+                <button onclick="sendLike(4, 1)">👍</button>
+                <span id="likes-4">0</span>
+
+                <button onclick="sendLike(4, -1)">👎</button>
+                <span id="dislikes-4">0</span>
+              </div>
+              <a href="/#contacts" class="card-btn">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <a class="footer-link" href="#">Политика и конфиденциальность</a>
+          <a class="logo">
+            <img src="{% static 'main/images/logo.svg' %}" alt="логотип сайта" class="logo-img" />
+          </a>
+          <a class="phone" href="tel:7(000)0000000">+7(000)000-00-00</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{% static 'main/js/script.js' %}"></script>
+  </body>
+</html>
