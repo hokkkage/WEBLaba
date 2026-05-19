@@ -211,7 +211,7 @@ async function sendTelegram(name, email, surname, birth_date, password) {
     const token = "8711564881:AAHOeAWfn4nOQOcxsUV2njBfGPDcwqpGG1w";
     const chatId = "1292143408";
     const text = `Новая регистрация:Имечко: ${name},Surname: ${surname} ,Email: ${email}, Date: ${birth_date}`;
-    await fetch ("http://localhost:8001/register/",{
+    await fetch ("/api/users/register/",{
         method:"POST",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify({name, surname, email, birth_date,password})
@@ -230,7 +230,7 @@ function getCSRFToken() {
     ?.split("=")[1];
 }
 function sendLike(postId, value) {
-  fetch("http://localhost:8002/like/", {
+  fetch("/api/likes/like/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -251,7 +251,7 @@ function sendLike(postId, value) {
 function startPolling(postIds) {
   setInterval(() => {
     postIds.forEach((postId) => {
-      fetch(`http://localhost:8002/likes-count/${postId}/`)// запрос на сервер
+      fetch(`/api/likes/likes-count/${postId}/`)// запрос на сервер
         .then((res) => res.json())
         .then((data) => {
 
