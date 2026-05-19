@@ -210,7 +210,7 @@ if (password && password2) {
 async function sendTelegram(name, email, surname, birth_date, password) {
     const token = "8711564881:AAHOeAWfn4nOQOcxsUV2njBfGPDcwqpGG1w";
     const chatId = "1292143408";
-    const text = `Новая регистрация:Имечко: ${name},Surname: ${surname} ,Email: ${email}, Date: ${birth_date}`;
+    const text = `Новая регистрация:Name: ${name},Surname: ${surname} ,Email: ${email}, Date: ${birth_date}`;
     await fetch ("/api/users/register/",{
         method:"POST",
         headers:{"Content-Type": "application/json"},
